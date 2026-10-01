@@ -1,1 +1,683 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engliiss Coffee Cafe | Premium & Affordable Coffee in Jhansi</title>
+    <meta name="description" content="Visit Engliiss Coffee Cafe at Shop No. 6, Bundelkhand University, Jhansi for premium coffee at affordable prices, tea, snacks, and cold beverages.">
+    <meta name="keywords" content="Engliiss Coffee Cafe, Coffee Cafe in Jhansi, Cafe near Bundelkhand University, Coffee near Bundelkhand University, Affordable cafe in Jhansi, Premium coffee in Jhansi">
+    <meta name="theme-color" content="#23130c">
 
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Engliiss Coffee Cafe - Premium Brews at Affordable Prices">
+    <meta property="og:description" content="A Premium Brew Coffee Cafe on very affordable price in Jhansi. Located at Bundelkhand University.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        espresso: {
+                            50: '#fbf8f5',
+                            100: '#f5edd',
+                            200: '#e8d7c8',
+                            300: '#d7bc9e',
+                            400: '#c49c74',
+                            500: '#b08151',
+                            600: '#946642',
+                            700: '#754e36',
+                            800: '#533829',
+                            900: '#35231a',
+                            950: '#1e130d'
+                        },
+                        amberGold: {
+                            DEFAULT: '#d4af37',
+                            light: '#f3e5ab',
+                            dark: '#aa820a'
+                        },
+                        warmBg: '#fdfbf7',
+                        cream: '#faf4eb'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Inline Styles & Custom Scrollbar -->
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e130d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #754e36;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(30, 19, 13, 0.75) 0%, rgba(30, 19, 13, 0.9) 100%);
+        }
+
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-card-light {
+            background: rgba(253, 251, 247, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(148, 102, 66, 0.15);
+        }
+    </style>
+
+    <!-- Structured Data / JSON-LD for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Engliiss Coffee Cafe",
+      "image": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800",
+      "telephone": "063935 39616",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. 6, Bundelkhand University",
+        "addressLocality": "Jhansi",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "284128",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.45,
+        "longitude": 78.58
+      },
+      "priceRange": "₹",
+      "servesCuisine": ["Coffee", "Beverages", "Fast Food", "Snacks", "Desserts"],
+      "description": "A Premium Brew Coffee Cafe on very affordable price in Jhansi, located at Bundelkhand University."
+    }
+    </script>
+</head>
+
+<body class="bg-warmBg text-espresso-950 font-sans antialiased selection:bg-amberGold selection:text-espresso-950">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-espresso-950 text-amberGold text-xs sm:text-sm py-2 px-4 text-center border-b border-espresso-800 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-location-dot text-amberGold animate-pulse"></i>
+        <span>Located at <strong>Shop No. 6, Bundelkhand University, Jhansi</strong></span>
+        <span class="hidden md:inline">|</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-phone text-xs"></i> 063935 39616</span>
+    </div>
+
+    <!-- MAIN STICKY NAVIGATION BAR -->
+    <header id="navbar" class="sticky top-0 z-50 transition-all duration-300 bg-espresso-900/95 backdrop-blur-md border-b border-espresso-800 text-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-full bg-gradient-to-br from-amberGold to-amber-700 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-mug-hot text-espresso-950 text-xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-xl sm:text-2xl text-cream tracking-wide group-hover:text-amberGold transition-colors">
+                            Engliiss <span class="text-amberGold font-sans font-semibold text-lg sm:text-xl">Coffee Cafe</span>
+                        </span>
+                        <span class="text-[10px] text-espresso-300 tracking-widest uppercase -mt-1">Jhansi • Bundelkhand Univ.</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden xl:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#home" class="hover:text-amberGold transition-colors py-1">Home</a>
+                    <a href="#about" class="hover:text-amberGold transition-colors py-1">About</a>
+                    <a href="#why-us" class="hover:text-amberGold transition-colors py-1">Why Us</a>
+                    <a href="#menu" class="hover:text-amberGold transition-colors py-1">Menu</a>
+                    <a href="#specials" class="hover:text-amberGold transition-colors py-1">Specials</a>
+                    <a href="#gallery" class="hover:text-amberGold transition-colors py-1">Gallery</a>
+                    <a href="#reviews" class="hover:text-amberGold transition-colors py-1">Reviews</a>
+                    <a href="#location" class="hover:text-amberGold transition-colors py-1">Location</a>
+                    <a href="#contact" class="hover:text-amberGold transition-colors py-1">Contact</a>
+                </nav>
+
+                <!-- Desktop CTA & WhatsApp -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://wa.me/916393539616?text=Hello%20Engliiss%20Coffee%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20menu." 
+                       target="_blank" 
+                       rel="noopener"
+                       class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs sm:text-sm px-4 py-2.5 rounded-full shadow-md hover:shadow-emerald-900/40 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>WhatsApp Order</span>
+                    </a>
+                    
+                    <button onclick="openQuickOrderModal()" class="inline-flex items-center gap-1.5 bg-amberGold hover:bg-amber-400 text-espresso-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-full shadow-md transition-all">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span>Order Builder</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="flex xl:hidden items-center gap-2">
+                    <a href="https://wa.me/916393539616" target="_blank" class="md:hidden bg-emerald-600 text-white p-2.5 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </a>
+                    <button id="mobileMenuBtn" aria-label="Toggle menu" class="text-cream hover:text-amberGold focus:outline-none p-2 rounded-lg bg-espresso-800/60">
+                        <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobileMenu" class="hidden xl:hidden bg-espresso-950 border-b border-espresso-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Home</a>
+            <a href="#about" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">About Cafe</a>
+            <a href="#why-us" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Why Visit Us</a>
+            <a href="#menu" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Menu Categories</a>
+            <a href="#specials" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Customer Favorites</a>
+            <a href="#gallery" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Cafe Gallery</a>
+            <a href="#reviews" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Reviews</a>
+            <a href="#location" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Location & Directions</a>
+            <a href="#contact" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Contact Us</a>
+
+            <div class="pt-2 grid grid-cols-2 gap-2">
+                <a href="https://wa.me/916393539616?text=Hello%20Engliiss%20Coffee%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20menu." target="_blank" class="w-full bg-emerald-600 text-white font-medium text-xs text-center py-2.5 rounded-lg flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Chat WhatsApp</span>
+                </a>
+                <a href="tel:06393539616" class="w-full bg-amberGold text-espresso-950 font-bold text-xs text-center py-2.5 rounded-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call Cafe</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-[90vh] flex items-center justify-center bg-espresso-950 text-cream overflow-hidden">
+        <!-- Background Image with Dark Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1920" 
+                 alt="Engliiss Coffee Cafe Atmosphere" 
+                 class="w-full h-full object-cover object-center scale-105 animate-pulse transition-all duration-1000 opacity-40">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+            
+            <!-- Location Badge -->
+            <div class="inline-flex items-center gap-2 bg-espresso-900/80 border border-amberGold/30 px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium text-amberGold mb-6 shadow-xl backdrop-blur-md">
+                <i class="fa-solid fa-location-dot text-amber-400 animate-bounce"></i>
+                <span>Bundelkhand University, Jhansi</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="font-serif font-bold text-4xl sm:text-6xl md:text-7xl tracking-tight text-white mb-4 leading-tight">
+                Engliiss <span class="text-amberGold italic font-normal">Coffee Cafe</span>
+            </h1>
+
+            <!-- Business Tagline -->
+            <p class="font-serif italic text-lg sm:text-2xl md:text-3xl text-amber-200/90 mb-6 max-w-3xl mx-auto font-light leading-relaxed">
+                “A Premium Brew Coffee Cafe on very affordable price in Jhansi....”
+            </p>
+
+            <!-- Supporting Text -->
+            <p class="text-base sm:text-lg text-espresso-200 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Enjoy freshly brewed aromatic coffee, delicious handcrafted treats, refreshing coolers, and a relaxing aesthetic environment designed for students, faculty, and local coffee lovers.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                <a href="#menu" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-amberGold hover:bg-amber-400 text-espresso-950 font-bold text-base shadow-lg shadow-amberGold/20 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>View Menu</span>
+                </a>
+
+                <a href="https://wa.me/916393539616?text=Hello%20Engliiss%20Coffee%20Cafe,%20I%20would%20like%20to%20order%20or%20enquire." 
+                   target="_blank" 
+                   rel="noopener"
+                   class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-base shadow-lg shadow-emerald-900/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+
+                <a href="#location" class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-espresso-800/80 hover:bg-espresso-700 text-cream border border-espresso-600 font-medium text-base backdrop-blur-md transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-compass"></i>
+                    <span>Get Directions</span>
+                </a>
+            </div>
+
+            <!-- Highlights Quick Ticker -->
+            <div class="mt-12 pt-8 border-t border-espresso-800/60 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-2">
+                    <div class="text-amberGold text-xl sm:text-2xl font-bold font-serif">100%</div>
+                    <div class="text-xs text-espresso-300">Fresh Brewed</div>
+                </div>
+                <div class="p-2">
+                    <div class="text-amberGold text-xl sm:text-2xl font-bold font-serif">Student Friendly</div>
+                    <div class="text-xs text-espresso-300">Affordable Rates</div>
+                </div>
+                <div class="p-2">
+                    <div class="text-amberGold text-xl sm:text-2xl font-bold font-serif">Shop No. 6</div>
+                    <div class="text-xs text-espresso-300">Bundelkhand Univ.</div>
+                </div>
+                <div class="p-2">
+                    <div class="text-amberGold text-xl sm:text-2xl font-bold font-serif">Quick Snack</div>
+                    <div class="text-xs text-espresso-300">Hot & Cold Drinks</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT THE CAFE -->
+    <section id="about" class="py-20 bg-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left: Cafe Visual Stack -->
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800" 
+                             alt="Engliiss Coffee Cafe Fresh Coffee Brew" 
+                             class="w-full h-[400px] sm:h-[480px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Badge Overlay -->
+                    <div class="absolute -bottom-6 -right-4 sm:right-6 bg-espresso-900 text-cream p-6 rounded-2xl shadow-xl border border-amberGold/30 max-w-[240px]">
+                        <p class="font-serif text-amberGold text-2xl font-bold">Affordable</p>
+                        <p class="text-xs text-espresso-200 mt-1">Premium cafe experience crafted for everyday visits in Jhansi.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div>
+                    <div class="inline-flex items-center gap-2 text-espresso-700 font-semibold text-xs tracking-widest uppercase mb-2">
+                        <span class="w-8 h-[2px] bg-amberGold"></span>
+                        Welcome to Jhansi's Favorite Brew Spot
+                    </div>
+                    
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso-950 mb-6 leading-tight">
+                        About <span class="text-amber-800">Engliiss Coffee Cafe</span>
+                    </h2>
+
+                    <p class="text-espresso-800 text-base sm:text-lg mb-6 leading-relaxed">
+                        <strong>Engliiss Coffee Cafe</strong> is a premium yet highly affordable coffee destination located right inside <strong>Shop No. 6 at Bundelkhand University, Jhansi</strong>.
+                    </p>
+
+                    <p class="text-espresso-700 text-sm sm:text-base mb-8 leading-relaxed">
+                        Whether you need an early morning energy boost, a quiet spot to catch up on studies, or a cozy corner to chill with friends, Engliiss Coffee Cafe brings you richly brewed espresso, soothing teas, refreshing cold beverages, and freshly made snacks—all priced thoughtfully for students, campus visitors, and local residents.
+                    </p>
+
+                    <!-- Features List -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+    ```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engliiss Coffee Cafe | Premium & Affordable Coffee in Jhansi</title>
+    <meta name="description" content="Visit Engliiss Coffee Cafe at Shop No. 6, Bundelkhand University, Jhansi for premium coffee at affordable prices, tea, snacks, and cold beverages.">
+    <meta name="keywords" content="Engliiss Coffee Cafe, Coffee Cafe in Jhansi, Cafe near Bundelkhand University, Coffee near Bundelkhand University, Affordable cafe in Jhansi, Premium coffee in Jhansi">
+    <meta name="theme-color" content="#23130c">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Engliiss Coffee Cafe - Premium Brews at Affordable Prices">
+    <meta property="og:description" content="A Premium Brew Coffee Cafe on very affordable price in Jhansi. Located at Bundelkhand University.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        espresso: {
+                            50: '#fbf8f5',
+                            100: '#f5edd',
+                            200: '#e8d7c8',
+                            300: '#d7bc9e',
+                            400: '#c49c74',
+                            500: '#b08151',
+                            600: '#946642',
+                            700: '#754e36',
+                            800: '#533829',
+                            900: '#35231a',
+                            950: '#1e130d'
+                        },
+                        amberGold: {
+                            DEFAULT: '#d4af37',
+                            light: '#f3e5ab',
+                            dark: '#aa820a'
+                        },
+                        warmBg: '#fdfbf7',
+                        cream: '#faf4eb'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Inline Styles & Custom Scrollbar -->
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e130d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #754e36;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(30, 19, 13, 0.75) 0%, rgba(30, 19, 13, 0.9) 100%);
+        }
+
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-card-light {
+            background: rgba(253, 251, 247, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(148, 102, 66, 0.15);
+        }
+    </style>
+
+    <!-- Structured Data / JSON-LD for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Engliiss Coffee Cafe",
+      "image": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800",
+      "telephone": "063935 39616",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. 6, Bundelkhand University",
+        "addressLocality": "Jhansi",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "284128",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.45,
+        "longitude": 78.58
+      },
+      "priceRange": "₹",
+      "servesCuisine": ["Coffee", "Beverages", "Fast Food", "Snacks", "Desserts"],
+      "description": "A Premium Brew Coffee Cafe on very affordable price in Jhansi, located at Bundelkhand University."
+    }
+    </script>
+</head>
+
+<body class="bg-warmBg text-espresso-950 font-sans antialiased selection:bg-amberGold selection:text-espresso-950">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-espresso-950 text-amberGold text-xs sm:text-sm py-2 px-4 text-center border-b border-espresso-800 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-location-dot text-amberGold animate-pulse"></i>
+        <span>Located at <strong>Shop No. 6, Bundelkhand University, Jhansi</strong></span>
+        <span class="hidden md:inline">|</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-phone text-xs"></i> 063935 39616</span>
+    </div>
+
+    <!-- MAIN STICKY NAVIGATION BAR -->
+    <header id="navbar" class="sticky top-0 z-50 transition-all duration-300 bg-espresso-900/95 backdrop-blur-md border-b border-espresso-800 text-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-full bg-gradient-to-br from-amberGold to-amber-700 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-mug-hot text-espresso-950 text-xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-xl sm:text-2xl text-cream tracking-wide group-hover:text-amberGold transition-colors">
+                            Engliiss <span class="text-amberGold font-sans font-semibold text-lg sm:text-xl">Coffee Cafe</span>
+                        </span>
+                        <span class="text-[10px] text-espresso-300 tracking-widest uppercase -mt-1">Jhansi • Bundelkhand Univ.</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden xl:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#home" class="hover:text-amberGold transition-colors py-1">Home</a>
+                    <a href="#about" class="hover:text-amberGold transition-colors py-1">About</a>
+                    <a href="#why-us" class="hover:text-amberGold transition-colors py-1">Why Us</a>
+                    <a href="#menu" class="hover:text-amberGold transition-colors py-1">Menu</a>
+                    <a href="#specials" class="hover:text-amberGold transition-colors py-1">Specials</a>
+                    <a href="#gallery" class="hover:text-amberGold transition-colors py-1">Gallery</a>
+                    <a href="#reviews" class="hover:text-amberGold transition-colors py-1">Reviews</a>
+                    <a href="#location" class="hover:text-amberGold transition-colors py-1">Location</a>
+                    <a href="#contact" class="hover:text-amberGold transition-colors py-1">Contact</a>
+                </nav>
+
+                <!-- Desktop CTA & WhatsApp -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://wa.me/916393539616?text=Hello%20Engliiss%20Coffee%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20menu." 
+                       target="_blank" 
+                       rel="noopener"
+                       class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs sm:text-sm px-4 py-2.5 rounded-full shadow-md hover:shadow-emerald-900/40 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>WhatsApp Order</span>
+                    </a>
+                    
+                    <button onclick="openQuickOrderModal()" class="inline-flex items-center gap-1.5 bg-amberGold hover:bg-amber-400 text-espresso-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-full shadow-md transition-all">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span>Order Builder</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="flex xl:hidden items-center gap-2">
+                    <a href="https://wa.me/916393539616" target="_blank" class="md:hidden bg-emerald-600 text-white p-2.5 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </a>
+                    <button id="mobileMenuBtn" aria-label="Toggle menu" class="text-cream hover:text-amberGold focus:outline-none p-2 rounded-lg bg-espresso-800/60">
+                        <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobileMenu" class="hidden xl:hidden bg-espresso-950 border-b border-espresso-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Home</a>
+            <a href="#about" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">About Cafe</a>
+            <a href="#why-us" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Why Visit Us</a>
+            <a href="#menu" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Menu Categories</a>
+            <a href="#specials" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Customer Favorites</a>
+            <a href="#gallery" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Cafe Gallery</a>
+            <a href="#reviews" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Reviews</a>
+            <a href="#location" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Location & Directions</a>
+            <a href="#contact" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-espresso-800 text-cream hover:text-amberGold font-medium">Contact Us</a>
+
+            <div class="pt-2 grid grid-cols-2 gap-2">
+                <a href="https://wa.me/916393539616?text=Hello%20Engliiss%20Coffee%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20menu." target="_blank" class="w-full bg-emerald-600 text-white font-medium text-xs text-center py-2.5 rounded-lg flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Chat WhatsApp</span>
+                </a>
+                <a href="tel:06393539616" class="w-full bg-amberGold text-espresso-950 font-bold text-xs text-center py-2.5 rounded-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call Cafe</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-[90vh] flex items-center justify-center bg-espresso-950 text-cream overflow-hidden">
+        <!-- Background Image with Dark Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1920" 
+                 alt="Engliiss Coffee Cafe Atmosphere" 
+                 class="w-full h-full object-cover object-center scale-105 animate-pulse transition-all duration-1000 opacity-40">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+            
+            <!-- Location Badge -->
+            <div class="inline-flex items-center gap-2 bg-espresso-900/80 border border-amberGold/30 px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium text-amberGold mb-6 shadow-xl backdrop-blur-md">
+                <i class="fa-solid fa-location-dot text-amber-400 animate-bounce"></i>
+                <span>Bundelkhand University, Jhansi</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="font-serif font-bold text-4xl sm:text-6xl md:text-7xl tracking-tight text-white mb-4 leading-tight">
+                Engliiss <span class="text-amberGold italic font-normal">Coffee Cafe</span>
+            </h1>
+
+            <!-- Business Tagline -->
+            <p class="font-serif italic text-lg sm:text-2xl md:text-3xl text-amber-200/90 mb-6 max-w-3xl mx-auto font-light leading-relaxed">
+                “A Premium Brew Coffee Cafe on very affordable price in Jhansi....”
+            </p>
+
+            <!-- Supporting Text -->
+            <p class="text-base sm:text-lg text-espresso-200 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Enjoy freshly brewed aromatic coffee, delicious handcrafted treats, refreshing coolers, and a relaxing aesthetic environment designed for students, faculty, and local coffee lovers.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                <a href="#menu" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-amberGold hover:bg-amber-400 text-espresso-950 font-bold text-base shadow-lg shadow-amberGold/20 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>View Menu</span>
+                </a>
+
+                <a href="https://wa.me/916393539616?text=Hello%20Engliiss%20Coffee%20Cafe,%20I%20would%20like%20to%20order%20or%20enquire." 
+                   target="_blank" 
+                   rel="noopener"
+                   class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-base shadow-lg shadow-emerald-900/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+
+                <a href="#location" class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-espresso-800/80 hover:bg-espresso-700 text-cream border border-espresso-600 font-medium text-base backdrop-blur-md transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-compass"></i>
+                    <span>Get Directions</span>
+                </a>
+            </div>
+
+            <!-- Highlights Quick Ticker -->
+            <div class="mt-12 pt-8 border-t border-espresso-800/60 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-2">
+                    <div class="text-amberGold text-xl sm:text-2xl font-bold font-serif">100%</div>
+                    <div class="text-xs text-espresso-300">Fresh Brewed</div>
+                </div>
+                <div class="p-2">
+                    <div class="text-amberGold text-xl sm:text-2xl font-bold font-serif">Student Friendly</div>
+                    <div class="text-xs text-espresso-300">Affordable Rates</div>
+                </div>
+                <div class="p-2">
+                    <div class="text-amberGold text-xl sm:text-2xl font-bold font-serif">Shop No. 6</div>
+                    <div class="text-xs text-espresso-300">Bundelkhand Univ.</div>
+                </div>
+                <div class="p-2">
+                    <div class="text-amberGold text-xl sm:text-2xl font-bold font-serif">Quick Snack</div>
+                    <div class="text-xs text-espresso-300">Hot & Cold Drinks</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT THE CAFE -->
+    <section id="about" class="py-20 bg-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left: Cafe Visual Stack -->
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800" 
+                             alt="Engliiss Coffee Cafe Fresh Coffee Brew" 
+                             class="w-full h-[400px] sm:h-[480px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Badge Overlay -->
+                    <div class="absolute -bottom-6 -right-4 sm:right-6 bg-espresso-900 text-cream p-6 rounded-2xl shadow-xl border border-amberGold/30 max-w-[240px]">
+                        <p class="font-serif text-amberGold text-2xl font-bold">Affordable</p>
+                        <p class="text-xs text-espresso-200 mt-1">Premium cafe experience crafted for everyday visits in Jhansi.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div>
+                    <div class="inline-flex items-center gap-2 text-espresso-700 font-semibold text-xs tracking-widest uppercase mb-2">
+                        <span class="w-8 h-[2px] bg-amberGold"></span>
+                        Welcome to Jhansi's Favorite Brew Spot
+                    </div>
+                    
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso-950 mb-6 leading-tight">
+                        About <span class="text-amber-800">Engliiss Coffee Cafe</span>
+                    </h2>
+
+                    <p class="text-espresso-800 text-base sm:text-lg mb-6 leading-relaxed">
+                        <strong>Engliiss Coffee Cafe</strong> is a premium yet highly affordable coffee destination located right inside <strong>Shop No. 6 at Bundelkhand University, Jhansi</strong>.
+                    </p>
+
+                    <p class="text-espresso-700 text-sm sm:text-base mb-8 leading-relaxed">
+                        Whether you need an early morning energy boost, a quiet spot to catch up on studies, or a cozy corner to chill with friends, Engliiss Coffee Cafe brings you richly brewed espresso, soothing teas, refreshing cold beverages, and freshly made snacks—all priced thoughtfully for students, campus visitors, and local residents.
+                    </p>
+
+                    <!-- Features List -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+    
